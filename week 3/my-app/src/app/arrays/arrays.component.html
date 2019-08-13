@@ -1,0 +1,14 @@
+<p>arrays works!</p>
+
+<ul>
+    <li *ngFor="let name of names">
+            {{name}}
+        <button (click)="removenames(name)">kill</button>
+    </li>
+    <li *ngFor="let hero of heros">
+            {{hero.name}}
+            <button (click)="removeheros(hero)">kill</button>
+    </li>
+</ul>
+<input #nameinput type="text" /> <button (click)="addname(nameinput.value)">add name</button>
+<input #heronameinput type="text" /><input #heroageinput type="text"> <button (click)="addhero(heronameinput.value,heroageinput.value)">add name</button>
