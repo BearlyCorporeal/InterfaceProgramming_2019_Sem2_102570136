@@ -1,15 +1,23 @@
-<p>arrays works!</p>
+
 
 <ul>
     
-    <li *ngFor="let todo of todos">
-        {{todo.title}}
-        {{todo.compleated}} 
-        {{todo.datestarted}}
-        {{todo.datefinished}}
-
-        <button (click)="removetodos(todo)">remove</button>
-        <button (click)="completetodo(todo)">complete </button>
+    <li class ="todolist" *ngFor="let todo of todos">
+        <div class="listitem">
+            {{todo.title}}
+            <br>
+            <P>compleated</P>
+            {{todo.compleated}}
+            <br> 
+            <P>time started</P>
+            {{todo.datestarted|date:'medium'}}
+            <br>
+            <P>time compleated</P>
+            {{todo.datefinished|date:'medium'}}
+            <br>
+            <button (click)="removetodos(todo)">remove</button>
+            <button (click)="completetodo(todo)">complete </button>
+        </div>
 </li>
 </ul>
 <input #todoinput type="text" /> <button (click)="addtodo(todoinput.value)">add todo</button>

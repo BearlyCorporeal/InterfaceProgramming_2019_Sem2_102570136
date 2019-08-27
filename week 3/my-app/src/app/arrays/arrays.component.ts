@@ -27,7 +27,7 @@ class todo {
 export class ArraysComponent implements OnInit {
 
   
-  todos = [new todo("ad some todos",new Date(),false)]
+  todos = [new todo("add some todos",new Date(),false)]
   constructor() { }
 
   ngOnInit() {

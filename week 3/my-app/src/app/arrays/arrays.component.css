@@ -1,0 +1,12 @@
+.todolist{
+background-color: lightgray; 
+width: 300px;
+}
+p{
+margin: 2px
+}
+.listitem{
+border-style: solid;
+border-width: 2px;
+ 
+}
