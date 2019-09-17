@@ -1,0 +1,15 @@
+<div class="row1">
+    <app-game-piece [player]="gamestate[0][0]" (piecechosen)="OnPieceChosen(0,0)"></app-game-piece>
+    <app-game-piece [player]="gamestate[0][1]" (piecechosen)="OnPieceChosen(0,1)"></app-game-piece>  
+    <app-game-piece [player]="gamestate[0][2]" (piecechosen)="OnPieceChosen(0,2)"></app-game-piece>    
+</div>
+<div class="row2">
+    <app-game-piece [player]="gamestate[1][0]" (piecechosen)="OnPieceChosen(1,0)"></app-game-piece>
+    <app-game-piece [player]="gamestate[1][1]" (piecechosen)="OnPieceChosen(1,1)"></app-game-piece>  
+    <app-game-piece [player]="gamestate[1][2]" (piecechosen)="OnPieceChosen(1,2)"></app-game-piece>    
+</div>
+<div class="row3">
+    <app-game-piece [player]="gamestate[2][0]" (piecechosen)="OnPieceChosen(2,0)"></app-game-piece>
+    <app-game-piece [player]="gamestate[2][1]" (piecechosen)="OnPieceChosen(2,1)"></app-game-piece>  
+    <app-game-piece [player]="gamestate[2][2]" (piecechosen)="OnPieceChosen(2,2)"></app-game-piece>    
+</div>
