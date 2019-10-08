@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { templateJitUrl } from '@angular/compiler';
+import { NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-game-board',
   templateUrl: './game-board.component.html',
   styleUrls: ['./game-board.component.css']
 })
-
 
 export class GameBoardComponent implements OnInit {
   
@@ -18,12 +19,11 @@ export class GameBoardComponent implements OnInit {
   numofturns: number =0;
   gamecount:number =0;
   currentletter: string = this.player1;
-  numofgames= 0;
+  numofgames=1;
   constructor() { }
   OnPieceChosen(x: number, y: number) {
     this.gamestate[x][y]=this.currentletter
     this.numofturns = this.numofturns + 1;
-    if (this.gamecount <= this.numofgames)
     if (this.gamestate[0][0] == this.player1 && this.gamestate[0][1] == this.player1 && this.gamestate[0][2] == this.player1){
       this.winningletter = this.player1
       this.gamestate[0][0]="";
@@ -300,7 +300,19 @@ export class GameBoardComponent implements OnInit {
     } else if (this.currentletter == this.player1) {
       this.currentletter = this.player2
     }
-    console.log(this.numofturns)
+    if (this.gamecount == this.numofgames){
+      if(this.player1wins < this.player2wins){
+        alert("player2 wins")
+      }
+      if(this.player1wins > this.player2wins){
+        alert("player1 wins")
+      }
+      if(this.player1wins == this.player2wins){
+        alert("Draw")
+      }
+    }
+    console.log(this.numofgames)
+    console.log(this.gamecount)
   }
   ngOnInit() {
   }
