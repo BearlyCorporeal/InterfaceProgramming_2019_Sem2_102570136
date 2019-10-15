@@ -2,7 +2,7 @@
     <input type="text" [(ngModel)]="numofgames">
 </div>
 <div class="currentletter">
-    <h1>current player: {{currentletter}}</h1>
+    <h1>current player: {{currentplayer}}</h1>
 </div>
 <div class="row1">
     <app-game-piece [player]="gamestate[0][0]" (piecechosen)="OnPieceChosen(0,0)"></app-game-piece>
@@ -20,6 +20,6 @@
     <app-game-piece [player]="gamestate[2][2]" (piecechosen)="OnPieceChosen(2,2)"></app-game-piece>    
 </div>
 <div class="wincount">
-    <p>player1 wins: {{player1wins}}</p>
-    <p>player2 wins: {{player2wins}}</p>
+    <p>{{player1}} wins: {{player1wins}}</p>
+    <p>{{player2}} wins: {{player2wins}}</p>
 </div>

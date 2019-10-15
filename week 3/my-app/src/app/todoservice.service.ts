@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { filter } from 'minimatch';
+import { Injectable } from '@angular/core';
 import { NgModule } from '@angular/core';
-
-
+@Injectable({
+  providedIn: 'root'
+})
 class todo {
   title: string;
   datestarted: Date;
@@ -16,32 +16,14 @@ class todo {
     this.compleated = compleated; 
   }
 }
-
-@Component({
-  selector: 'app-arrays',
-  templateUrl: './arrays.component.html',
-  styleUrls: ['./arrays.component.css']
-})
-export class ArraysComponent implements OnInit {
-
-  input
+export class TodoserviceService {
   newtodo="create new todo"
   todos = [new todo("add some todos",new Date(),false)]
   constructor() { }
-
-  ngOnInit() {
-  }
-
-  ;
-
-   
-  
-  
   removetodos(todo: todo){
     var index = this.todos.indexOf(todo);
     this.todos.splice(index, 1);
   }
-  
   addtodo(){
     this.todos.push(new todo(this.newtodo,new Date(),false));
   }
@@ -49,5 +31,4 @@ export class ArraysComponent implements OnInit {
     todo.compleated = true;
     todo.datefinished = new Date();
   }
-
 }

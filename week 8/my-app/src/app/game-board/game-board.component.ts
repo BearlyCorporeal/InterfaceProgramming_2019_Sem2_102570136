@@ -18,11 +18,11 @@ export class GameBoardComponent implements OnInit {
   player2wins: number = 0;
   numofturns: number =0;
   gamecount:number =0;
-  currentletter: string = this.player1;
+  currentplayer: string = this.player1;
   numofgames=1;
   constructor() { }
   OnPieceChosen(x: number, y: number) {
-    this.gamestate[x][y]=this.currentletter
+    this.gamestate[x][y]=this.currentplayer
     this.numofturns = this.numofturns + 1;
     if (this.gamestate[0][0] == this.player1 && this.gamestate[0][1] == this.player1 && this.gamestate[0][2] == this.player1){
       this.winningletter = this.player1
@@ -35,7 +35,7 @@ export class GameBoardComponent implements OnInit {
       this.gamestate[2][0]="";
       this.gamestate[2][1]="";
       this.gamestate[2][2]="";
-      this.currentletter = this.player2;
+      this.currentplayer = this.player2;
       this.player1wins = this.player1wins +1;
       this.gamecount = this.gamecount +1;
       this.numofturns = 0;
@@ -51,7 +51,7 @@ export class GameBoardComponent implements OnInit {
       this.gamestate[2][0]="";
       this.gamestate[2][1]="";
       this.gamestate[2][2]="";
-      this.currentletter = this.player2;
+      this.currentplayer = this.player2;
       this.player1wins = this.player1wins +1;
       this.gamecount = this.gamecount +1;
       this.numofturns = 0;
@@ -67,7 +67,7 @@ export class GameBoardComponent implements OnInit {
       this.gamestate[2][0]="";
       this.gamestate[2][1]="";
       this.gamestate[2][2]="";
-      this.currentletter = this.player2;
+      this.currentplayer = this.player2;
       this.player1wins = this.player1wins +1;
       this.gamecount = this.gamecount +1;
       this.numofturns = 0;
@@ -83,7 +83,7 @@ export class GameBoardComponent implements OnInit {
       this.gamestate[2][0]="";
       this.gamestate[2][1]="";
       this.gamestate[2][2]="";
-      this.currentletter = this.player2;
+      this.currentplayer = this.player2;
       this.player1wins = this.player1wins +1;
       this.gamecount = this.gamecount +1;
       this.numofturns = 0;
@@ -99,7 +99,7 @@ export class GameBoardComponent implements OnInit {
       this.gamestate[2][0]="";
       this.gamestate[2][1]="";
       this.gamestate[2][2]="";
-      this.currentletter = this.player2;
+      this.currentplayer = this.player2;
       this.player1wins = this.player1wins +1;
       this.gamecount = this.gamecount +1;
       this.numofturns = 0;
@@ -115,7 +115,7 @@ export class GameBoardComponent implements OnInit {
       this.gamestate[2][0]="";
       this.gamestate[2][1]="";
       this.gamestate[2][2]="";
-      this.currentletter = this.player2;
+      this.currentplayer = this.player2;
       this.player1wins = this.player1wins +1;
       this.gamecount = this.gamecount +1;
       this.numofturns = 0;
@@ -131,7 +131,7 @@ export class GameBoardComponent implements OnInit {
       this.gamestate[2][0]="";
       this.gamestate[2][1]="";
       this.gamestate[2][2]="";
-      this.currentletter = this.player2;
+      this.currentplayer = this.player2;
       this.player1wins = this.player1wins +1;
       this.gamecount = this.gamecount +1;
       this.numofturns = 0;
@@ -147,7 +147,7 @@ export class GameBoardComponent implements OnInit {
       this.gamestate[2][0]="";
       this.gamestate[2][1]="";
       this.gamestate[2][2]="";
-      this.currentletter = this.player2;
+      this.currentplayer = this.player2;
       this.player1wins = this.player1wins +1;
       this.gamecount = this.gamecount +1;
       this.numofturns = 0;
@@ -165,7 +165,7 @@ export class GameBoardComponent implements OnInit {
       this.gamestate[2][0]="";
       this.gamestate[2][1]="";
       this.gamestate[2][2]="";
-      this.currentletter = this.player1;
+      this.currentplayer = this.player1;
       this.player2wins = this.player2wins +1;
       this.gamecount = this.gamecount +1;
       this.numofturns = 0;
@@ -181,7 +181,7 @@ export class GameBoardComponent implements OnInit {
       this.gamestate[2][0]="";
       this.gamestate[2][1]="";
       this.gamestate[2][2]="";
-      this.currentletter = this.player1;
+      this.currentplayer = this.player1;
       this.player2wins = this.player2wins +1;
       this.gamecount = this.gamecount +1;
       this.numofturns = 0;
@@ -197,7 +197,7 @@ export class GameBoardComponent implements OnInit {
       this.gamestate[2][0]="";
       this.gamestate[2][1]="";
       this.gamestate[2][2]="";
-      this.currentletter = this.player1;
+      this.currentplayer = this.player1;
       this.player2wins = this.player2wins +1;
       this.gamecount = this.gamecount +1;
       this.numofturns = 0;
@@ -213,7 +213,7 @@ export class GameBoardComponent implements OnInit {
       this.gamestate[2][0]="";
       this.gamestate[2][1]="";
       this.gamestate[2][2]="";
-      this.currentletter = this.player1;
+      this.currentplayer = this.player1;
       this.player2wins = this.player2wins +1;
       this.gamecount = this.gamecount +1;
       this.numofturns = 0;
@@ -229,7 +229,7 @@ export class GameBoardComponent implements OnInit {
       this.gamestate[2][0]="";
       this.gamestate[2][1]="";
       this.gamestate[2][2]="";
-      this.currentletter = this.player1;
+      this.currentplayer = this.player1;
       this.player2wins = this.player2wins +1;
       this.gamecount = this.gamecount +1;
       this.numofturns = 0;
@@ -245,7 +245,7 @@ export class GameBoardComponent implements OnInit {
       this.gamestate[2][0]="";
       this.gamestate[2][1]="";
       this.gamestate[2][2]="";
-      this.currentletter = this.player1;
+      this.currentplayer = this.player1;
       this.player2wins = this.player2wins +1;
       this.gamecount = this.gamecount +1;
       this.numofturns = 0;
@@ -261,7 +261,7 @@ export class GameBoardComponent implements OnInit {
       this.gamestate[2][0]="";
       this.gamestate[2][1]="";
       this.gamestate[2][2]="";
-      this.currentletter = this.player1;
+      this.currentplayer = this.player1;
       this.player2wins = this.player2wins +1;
       this.gamecount = this.gamecount +1;
       this.numofturns = 0;
@@ -277,7 +277,7 @@ export class GameBoardComponent implements OnInit {
       this.gamestate[2][0]="";
       this.gamestate[2][1]="";
       this.gamestate[2][2]="";
-      this.currentletter = this.player1;
+      this.currentplayer = this.player1;
       this.player2wins = this.player2wins +1;
       this.gamecount = this.gamecount +1;
       this.numofturns = 0;
@@ -292,20 +292,20 @@ export class GameBoardComponent implements OnInit {
       this.gamestate[2][0]="";
       this.gamestate[2][1]="";
       this.gamestate[2][2]="";
-      this.currentletter = this.player1;
+      this.currentplayer = this.player1;
       this.numofturns=0;
     }
-    if (this.currentletter == this.player2) {
-      this.currentletter = this.player1
-    } else if (this.currentletter == this.player1) {
-      this.currentletter = this.player2
+    if (this.currentplayer == this.player2) {
+      this.currentplayer = this.player1
+    } else if (this.currentplayer == this.player1) {
+      this.currentplayer = this.player2
     }
     if (this.gamecount == this.numofgames){
       if(this.player1wins < this.player2wins){
-        alert("player2 wins")
+        alert("{{player2}} wins")
       }
       if(this.player1wins > this.player2wins){
-        alert("player1 wins")
+        alert("{{player1}} wins")
       }
       if(this.player1wins == this.player2wins){
         alert("Draw")

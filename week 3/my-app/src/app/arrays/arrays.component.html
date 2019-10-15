@@ -20,6 +20,6 @@
         </div>
 </li>
 </ul>
-<input #todoinput type="text" /> <button (click)="addtodo(todoinput.value)">add todo</button>
+<input type="text" [(ngModel)]="newtodo" /> <button (click)="addtodo()">add todo</button>
 
 
