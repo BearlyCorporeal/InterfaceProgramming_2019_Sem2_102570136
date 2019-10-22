@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { PlanetsServiceService } from '../planets-service.service';
 import { planet } from '../planet';
 
@@ -9,9 +9,14 @@ import { planet } from '../planet';
 })
 export class PlanetsDetailComponent implements OnInit {
 
+  @Input()
+  planet: planet;
   constructor(public planetsServiceService:PlanetsServiceService) { }
 
   ngOnInit() {
+  }
+  removeplanetfromservice(planet){
+    this.planetsServiceService.removeplanet(planet)
   }
 
 }

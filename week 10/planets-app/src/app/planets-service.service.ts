@@ -13,4 +13,8 @@ export class PlanetsServiceService {
     this.planets.push(new planet(name,moons,distancefromSun))
     console.log(this.planets)
   }
+  removeplanet(planet) {
+    var index = this.planets.indexOf(planet);
+    this.planets.splice(index, 1);
+  }
 }

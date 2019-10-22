@@ -14,10 +14,10 @@ export class PlanetsCreateComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.planetsServiceService.addplanets("asd", 1, 1);
   }
   addplanetstoservice(name: string, moons: number, distancefromSun: number){
     this.planetsServiceService.addplanets(name,moons,distancefromSun);
   }
+  
 
 }
