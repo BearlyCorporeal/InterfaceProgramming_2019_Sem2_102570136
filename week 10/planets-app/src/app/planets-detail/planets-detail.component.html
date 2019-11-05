@@ -1,4 +1,6 @@
-<p>{{planet.name}}</p><input type="text" /> 
-<p>{{planet.moons}}</p>
-<p>{{planet.distancefromSun}}</p>
+<p>---------------------------------------------------------------------------</p>
+<p>the planets name is {{planet.name}}</p>
+<p>the planet has {{planet.moons}} moons</p>
+<p>the planets distance from the sun is {{planet.distancefromSun}}</p>
 <button (click)="removeplanetfromservice(planet)">remove</button>
+<input #nameedit type="text" />  <button (click)="editplanetinservice(planet,nameedit.value)">edit</button>

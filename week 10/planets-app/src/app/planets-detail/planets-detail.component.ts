@@ -18,5 +18,8 @@ export class PlanetsDetailComponent implements OnInit {
   removeplanetfromservice(planet){
     this.planetsServiceService.removeplanet(planet)
   }
+  editplanetinservice(planet,change :string){
+    this.planetsServiceService.editplanet(planet,change)
+  }
 
 }

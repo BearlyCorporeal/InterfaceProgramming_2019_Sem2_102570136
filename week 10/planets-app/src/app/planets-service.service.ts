@@ -17,4 +17,8 @@ export class PlanetsServiceService {
     var index = this.planets.indexOf(planet);
     this.planets.splice(index, 1);
   }
+  editplanet(planet,change:string){
+    var index = this.planets.indexOf(planet);
+    planet.name= change
+  }
 }
