@@ -1,3 +1,5 @@
+<base href="/">
 <li *ngFor="let planet of planetsServiceService.planets">
-    <app-planets-detail [planet]= "planet"></app-planets-detail>
+    <!-- <app-planets-detail [planet]= "planet"></app-planets-detail> -->
+    <app-planetlistitem [planet]= "planet"></app-planetlistitem>
 </li>

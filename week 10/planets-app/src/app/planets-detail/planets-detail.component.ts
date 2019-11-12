@@ -1,4 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
+import { switchMap } from 'rxjs/operators';
+import { Router, ActivatedRoute, ParamMap,RouterModule} from '@angular/router';
 import { PlanetsServiceService } from '../planets-service.service';
 import { planet } from '../planet';
 
@@ -9,11 +11,18 @@ import { planet } from '../planet';
 })
 export class PlanetsDetailComponent implements OnInit {
 
+  
   @Input()
   planet: planet;
-  constructor(public planetsServiceService:PlanetsServiceService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    public planetsServiceService:PlanetsServiceService) { }
 
   ngOnInit() {
+    let name = this.route.snapshot.paramMap.get('name');
+    this.planet = this.planetsServiceService.getplanet(name);
+    console.log("this is when this happens")
   }
   removeplanetfromservice(planet){
     this.planetsServiceService.removeplanet(planet)
@@ -21,5 +30,4 @@ export class PlanetsDetailComponent implements OnInit {
   editplanetinservice(planet,change :string){
     this.planetsServiceService.editplanet(planet,change)
   }
-
 }

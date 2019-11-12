@@ -7,6 +7,7 @@ import { planet } from './planet';
 export class PlanetsServiceService {
 
   planets: planet[]=[];
+  currentplanet: planet
   constructor() { }
 
   addplanets(name: string, moons: number, distancefromSun: number){
@@ -20,5 +21,14 @@ export class PlanetsServiceService {
   editplanet(planet,change:string){
     var index = this.planets.indexOf(planet);
     planet.name= change
+  }
+  getplanet(name:string) :planet{
+    this.planets.forEach(planet => {
+      if(planet.name == name){
+        this.currentplanet = planet
+      }
+      console.log(this.currentplanet)
+    });
+    return this.currentplanet;
   }
 }
